@@ -1,18 +1,17 @@
 from flask import Flask, request, jsonify, render_template
 import pandas as pd
-import pickle
+import torch
 import re
 from tld import get_tld
 from urllib.parse import urlparse
 
 app = Flask(__name__)
 
-# Load the trained RandomForestClassifier model
-with open('model.pkl', 'rb') as model_file:
-    model = pickle.load(model_file)
+# Load the saved model from file
+model = torch.load('model (3).pth')
 
 # Dictionary mapping categories to numerical values
-rem = {"benign": 0, "defacement": 1, "phishing": 2, "malware": 3}
+rem = {0: "Benign", 1: "Defacement", 2: "Phishing", 3: "Malware"}
 
 def process_tld(url):
     try:
@@ -106,12 +105,8 @@ def URL_Converter(url):
     
     return X
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
-
-@app.route('/predict', methods=['GET', 'POST'])
-def predict():
     if request.method == 'POST':
         # Get the JSON data from the POST request
         url = request.json.get('url')

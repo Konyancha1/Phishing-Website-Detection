@@ -16,5 +16,30 @@
         </form>
         <div id="prediction-result"></div>
     </div>
+
+    <script>
+        document.getElementById('prediction-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const url = document.getElementById('url').value;
+            
+            fetch('/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ 'url': url })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response data here
+                document.getElementById('prediction-result').innerText = `Prediction: ${data.prediction}`;
+            })
+            .catch(error => {
+                // Handle errors here
+                console.error('Error:', error);
+            });
+        });
+    </script>
 </body>
 </html>
