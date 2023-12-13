@@ -106,6 +106,9 @@ def URL_Converter(url):
     
     return X
 
+@app.route('/', methods=['GET'])
+def index():
+    return render_template('index.html')
 
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
