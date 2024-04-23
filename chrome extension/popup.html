@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Website Checker</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Phishing Website Checker</h1>
+            <p>Check if a website is a phishing site</p>
+        </div>
+        <div class="input-container">
+            <input type="text" id="urlInput" placeholder="Current Tab URL" readonly>
+            <button id="predictButton">Check</button>
+        </div>
+        <div class="result-container">
+            <div id="result" class="icon"></div>
+            <div id="prediction" class="prediction-text"></div>
+        </div>
+        <div class="explanation">
+            <h2>What is Phishing?</h2>
+            <p>Phishing is a fraudulent attempt to obtain sensitive information such as usernames, passwords, and credit card details by disguising as a trustworthy entity in electronic communication.</p>
+            <h2>Why is Phishing Dangerous?</h2>
+            <p>Phishing attacks can lead to identity theft, financial loss, and unauthorized access to personal and sensitive information.</p>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 Phishing Website Checker</p>
+            <p>This tool only checks the structure of a URL to determine if it resembles known patterns of malicious websites. It may not accurately identify all unsafe websites.</p>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

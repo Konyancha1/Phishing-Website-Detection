@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 400px;
+  padding: 18px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.header p {
+  font-size: 14px;
+  color: #666;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#urlInput {
+  width: 300px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#predictButton {
+  padding: 8px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#predictButton:hover {
+  background-color: #0056b3;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  margin-bottom: 10px;
+}
+
+.icon img {
+  width: 60px; 
+  height: auto; 
+}
+
+.prediction-text p{
+  font-size: 20px; 
+}
+
+.explanation {
+  margin-bottom: 20px;
+}
+
+.explanation h2 {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.explanation p {
+  font-size: 14px;
+  color: #666;
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
