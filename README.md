@@ -1,3 +1,3 @@
 # Phishing-Website-Detection
 
-### Video Walkthrough (https://www.loom.com/share/52fbfb4ff4f74b7d80cbb150d4bc9dd7?sid=339d8158-edc2-4eaf-b709-29a93b3effb6)
+### Video Walkthrough (https://www.loom.com/share/e651dc82c6c847e7a0927e014f321b30?sid=03f5ac59-0223-4080-a08c-0c6ffb0ef6ae)
